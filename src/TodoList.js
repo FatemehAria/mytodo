@@ -16,15 +16,15 @@ const TodoList = () => {
 
   const addTasks = () => {
     text.trim() && setTasks((last) => [...last, { text, status: false }]);
-    toast(`${text} Added! ✨`, {
-      position: "top-right",
-      autoClose: 3000,
+    toast.success(`${text} Added!`, {
+      position: "top-left",
+      autoClose: 5000,
       hideProgressBar: false,
       closeOnClick: true,
       pauseOnHover: true,
       draggable: true,
       progress: undefined,
-      theme: "light",
+      theme: "dark",
       });
     setText("");
   };
